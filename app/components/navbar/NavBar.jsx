@@ -1,6 +1,8 @@
 "use client";
 import { useState, createContext } from "react";
 import NavLink from "./NavLink";
+import { IonIcon } from "@ionic/react";
+import { pawOutline, closeOutline } from 'ionicons/icons';
 
 export const NavContext = createContext();
 
@@ -8,32 +10,18 @@ function NavBar() {
   const [isActive, setIsActive] = useState(false);
   return (
     <NavContext.Provider value={{ isActive, setIsActive }}>
-      <nav class="">
-        <button className=" md:hidden"
+      <nav className="">
+        <button className=" md:hidden text-3xl hover:text-blumine-300"
           onClick={() => {
             setIsActive(!isActive);
           }}
         >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          {isActive ? <IonIcon icon={closeOutline} aria-label="Close Menu"></IonIcon>:<IonIcon icon={pawOutline} aria-label="Open Menu"></IonIcon>}
         </button>
         <ul
-          className={`fixed left-0 right-0 min-h-screen bg-tuna-900 bg-opacity-50 transform transition-transform ${
-            isActive ? "translate-x-0" : "translate-x-full"
-          } p-4 space-y-4 text-gray-400 md:flex md:relative md:min-h-0 md:space-y-0 md:space-x-6 md:p-0`}
+          className={`fixed left-0 right-0 top-20 min-h-screen bg-anakiwa-700 md:bg-transparent bg-opacity-50 transform transition-transform duration-500 ${
+            isActive ? "translate-x-0" : "-translate-x-full"
+          } p-4 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl`}
         >
           <NavLink donde="#inicio">Inicio</NavLink>
           <NavLink donde="#servicios">Servicios</NavLink>

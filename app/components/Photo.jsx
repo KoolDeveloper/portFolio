@@ -4,10 +4,10 @@ export default function Photo() {
   return (
     <Image
       src="/yomerito.png"
-      width={1920}
-      height={1080}
+      width={1200}
+      height={628}
       alt="A picture of myself"
-      className="rounded-md w-full h-full object-cover"
+      className="rounded-md w-full h-full object-scale-down"
       loading="lazy"
     />
   );

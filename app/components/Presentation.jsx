@@ -1,12 +1,25 @@
+"use client";
+
+import Typewriter from "typewriter-effect";
+
 export default function Presentation() {
   return (
-    <section className="">
-      <div className="text-4xl">
-        <p className="text-gray-400">I&apos;m</p>
-        <p className="font-bold ">James Ruiz</p>
-        <hr className="border-2 w-36 border-yellow-300" />
+    <section className="mt-4">
+      <div className="text-4xl text-center">
+        <p className="text-blumine-600 dark:text-rope-500">I&apos;m</p>
+        <p className="font-bold text-blumine-600 dark:text-rope-500">
+          James Ruiz
+        </p>
+        <div className="font-bold text-blumine-500 dark:text-rope-300">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Software Developer")
+                .start();
+            }}
+          />
+        </div>
       </div>
-      <div></div>
     </section>
   );
 }

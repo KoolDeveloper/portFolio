@@ -6,7 +6,7 @@ function NavLink({ donde, children }) {
 
   return (
     <li>
-      <a href={donde} onClick={() => setIsActive(false)}>
+      <a href={donde} onClick={() => setIsActive(false)} className="hover:text-blumine-300 dark:hover:text-rope-300">
         {children}
       </a>
     </li>
