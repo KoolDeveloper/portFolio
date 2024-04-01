@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <NavContext.Provider value={{ isActive, setIsActive }}>
       <nav className="">
-        <button className=" md:hidden text-3xl hover:text-blumine-300"
+        <button className=" md:hidden text-3xl text-blumine-600 dark:text-rope-600 hover:text-blumine-300 dark:hover:text-rope-300"
           onClick={() => {
             setIsActive(!isActive);
           }}
