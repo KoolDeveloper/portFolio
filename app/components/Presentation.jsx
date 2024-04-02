@@ -1,21 +1,40 @@
 "use client";
 
+import { Dancing_Script } from "next/font/google";
+
+const dancingScript = Dancing_Script({
+  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+});
+
 import Typewriter from "typewriter-effect";
 
 export default function Presentation() {
   return (
-    <section className="mt-4">
+    <section className={`mt-20 ${dancingScript.className}`}>
       <div className="text-4xl text-center">
-        <p className="text-blumine-600 dark:text-rope-500">I&apos;m</p>
-        <p className="font-bold text-blumine-600 dark:text-rope-500">
-          James Ruiz
-        </p>
-        <div className="font-bold text-blumine-500 dark:text-rope-300">
+        <div className="font-bold text-blumine-600 dark:text-rope-500">
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString("Software Developer")
+                .typeString("I'm")
+                .pasteString("<br>")
+                .typeString("James Ruiz")
                 .start();
+            }}
+          />
+        </div>
+        <div className="flex items-center justify-center relative">
+          <div className="photoHolder"></div>
+        </div>
+
+        <div className="font-bold text-blumine-500 dark:text-rope-300">
+          <Typewriter
+            options={{
+              strings: ["Software Developer", "UI/UX Designer"],
+              autoStart: true,
+              loop: true,
             }}
           />
         </div>
