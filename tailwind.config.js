@@ -10,6 +10,10 @@ module.exports = {
       fontFamily:{
         DotGothic16: ["DotGothic16", "sans-serif"]
       },
+      boxShadow: {
+        '3xl': '0px 0px 52px 0px rgba(0,0,0,1);',
+        'dentro': 'inset 0px 0px 20px 0px rgba(250,176,20,1);'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

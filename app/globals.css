@@ -14,57 +14,26 @@
   display: none;
 }
 
-@keyframes rotate {
-  0% {
-    transform: perspective(3000px) rotateY(-90deg) rotateX(20deg);
-    background: #4992ad88;
-  }
-  40% {
-    transform: perspective(3000px);
-    background: #4992adff;
-  }
-
-  60% {
-    transform: perspective(3000px) rotateY(0deg) rotateX(0deg);
-    background: #4992adff;
-  }
-
-  100% {
-    transform: perspective(3000px) rotateY(90deg) rotateX(20deg);
-    background: #4992ad88;
-  }
-}
-
-.photoHolder {
+.photoHolder{
   transform: perspective(3000px);
   transform-style: preserve-3d;
   position: relative;
-  width: 200px;
-  height: 200px;
-  background: #4992ad;
-  z-index: -1;
+  width: 40vw;
 }
 
 .photoHolder::before {
-  content: " ";
-  width: 98%;
-  height: 98%;
-  position: relative;
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 150%;
   display: block;
-  left: 1%;
-  top: 1%;
-  border-radius: 200px;
-  transform: translateZ(20px);
-  box-shadow: 0 0 20px 0px #fff, 0 0 0 30px #cf331f, 0 0 20px 30px #fff,
-    0 0 0 60px #cf331f, 0 0 20px 60px #fff, 0 0 0 90px #cf331f,
-    0 0 20px 90px #fff, 0 0 0 120px #cf331f, 0 0 20px 120px #fff,
-    0 0 0 150px #cf331f;
+  left: 10%;
+  bottom: -12%;
+  z-index: 1;
 }
-
 .photoHolder::after {
   content: " ";
   position: absolute;
-  background: url("/yomerito.png") no-repeat center/cover;
   width: 80%;
   height: 150%;
   display: block;
@@ -72,4 +41,5 @@
   bottom: -12%;
   transform: rotateX(-10deg);
   transform-origin: center 120%;
+  z-index: 30;
 }

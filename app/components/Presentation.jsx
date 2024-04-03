@@ -9,6 +9,7 @@ const dancingScript = Dancing_Script({
 });
 
 import Typewriter from "typewriter-effect";
+import Photo from "./Photo";
 
 export default function Presentation() {
   return (
@@ -28,7 +29,7 @@ export default function Presentation() {
         <div className="flex items-center justify-center relative">
           <div className="photoHolder"></div>
         </div>
-
+        <Photo />
         <div className="font-bold text-blumine-500 dark:text-rope-300">
           <Typewriter
             options={{
