@@ -14,32 +14,14 @@
   display: none;
 }
 
-.photoHolder{
-  transform: perspective(3000px);
-  transform-style: preserve-3d;
-  position: relative;
-  width: 40vw;
-}
-
-.photoHolder::before {
+.text {
   position: absolute;
-  content: "";
-  width: 80%;
-  height: 150%;
-  display: block;
-  left: 10%;
-  bottom: -12%;
-  z-index: 1;
-}
-.photoHolder::after {
-  content: " ";
-  position: absolute;
-  width: 80%;
-  height: 150%;
-  display: block;
-  left: 10%;
-  bottom: -12%;
-  transform: rotateX(-10deg);
-  transform-origin: center 120%;
-  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  shape-outside: circle(100px); /* Define la forma del texto alrededor del círculo */
 }

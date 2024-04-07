@@ -21,7 +21,7 @@ function NavBar() {
         <ul
           className={`fixed left-0 right-0 top-20 min-h-screen bg-anakiwa-700 md:bg-transparent bg-opacity-50 transform transition-transform duration-500 ${
             isActive ? "translate-x-0" : "-translate-x-full"
-          } p-4 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl`}
+          } p-4 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl text-center`}
         >
           <NavLink donde="#inicio">Inicio</NavLink>
           <NavLink donde="#servicios">Servicios</NavLink>
