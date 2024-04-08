@@ -10,9 +10,9 @@ const dancingScript = Dancing_Script({
   subsets: ['latin'],
 });
 
-function Photo() {
+function Photo({setIsHidden, isHidden}) {
   return (
-    <button className="mt-8 group relative w-[60vw] md:w-[30vw] h-[60vw] md:h-[30vw] flex justify-center items-center bg-[#e63b1a] hover:bg-[#ab0603] mx-auto rounded-full border-[5px] border-black shadow-3xl">
+    <button className="mt-8 group relative w-[60vw] md:w-[30vw] h-[60vw] md:h-[30vw] flex justify-center items-center bg-[#e63b1a] hover:bg-[#ab0603] mx-auto rounded-full border-[5px] border-black shadow-3xl" onClick={()=>{setIsHidden(!isHidden)}}>
       <div className={`${dancingScript.className} font-bold text-lg  text-white absolute z-10 top-2 lg:text-3xl lg:top-4 `}>
         <Typewriter
           onInit={(typewriter) => {
