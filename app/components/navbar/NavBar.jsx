@@ -8,6 +8,7 @@ export const NavContext = createContext();
 
 function NavBar() {
   const [isActive, setIsActive] = useState(false);
+
   return (
     <NavContext.Provider value={{ isActive, setIsActive }}>
       <nav className="">
@@ -24,6 +25,7 @@ function NavBar() {
           } p-4 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl text-center`}
         >
           <NavLink donde="#inicio">Inicio</NavLink>
+          <NavLink donde="#about"><p onClick={()=>{document.getElementById("about").click()}}>Sobre mi</p></NavLink>
           <NavLink donde="#servicios">Servicios</NavLink>
         </ul>
       </nav>
