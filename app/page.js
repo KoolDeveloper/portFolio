@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <main className="grid gap-2 md:gap-4">
-      <Banner></Banner>      
+      <Banner></Banner>
     </main>
   );
 }
