@@ -24,7 +24,7 @@ function Photo({ setIsHidden, isHidden }) {
         }}
       >
         <div
-          className={`${dancingScript.className} font-bold text-lg  text-white absolute z-10 top-2 lg:text-3xl lg:top-4 `}
+          className={`${dancingScript.className} font-bold text-lg  text-white absolute z-10 top-2 lg:text-3xl lg:top-4 group-hover:text-yellow-200`}
         >
           <Typewriter
             onInit={(typewriter) => {
@@ -37,7 +37,7 @@ function Photo({ setIsHidden, isHidden }) {
           />
         </div>
         <div
-          className={`${dancingScript.className} font-bold text-lg text-white absolute z-10 bottom-8 lg:text-3xl lg:bottom-16`}
+          className={`${dancingScript.className} font-bold text-lg text-white absolute z-10 bottom-8 lg:text-3xl lg:bottom-16 group-hover:text-yellow-200`}
         >
           <Typewriter
             options={{
@@ -60,6 +60,7 @@ function Photo({ setIsHidden, isHidden }) {
                         alt="My photo"
                         src={"/yomerito.png"}
                         className="absolute bottom-0 w-full h-full"
+                        priority={true}
                       />
                     </div>
                   </div>
