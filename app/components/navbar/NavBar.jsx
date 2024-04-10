@@ -3,11 +3,13 @@ import { useState, createContext } from "react";
 import NavLink from "./NavLink";
 import { IonIcon } from "@ionic/react";
 import { pawOutline, closeOutline } from 'ionicons/icons';
+import {useTranslations} from 'next-intl';
 
 export const NavContext = createContext();
 
 function NavBar() {
   const [isActive, setIsActive] = useState(false);
+  const t = useTranslations("navigation")
 
   return (
     <NavContext.Provider value={{ isActive, setIsActive }}>
@@ -24,9 +26,9 @@ function NavBar() {
             isActive ? "translate-x-0" : "-translate-x-full"
           } p-4 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl text-center`}
         >
-          <NavLink donde="#inicio">Home</NavLink>
-          <NavLink donde="#about"><p onClick={()=>{document.getElementById("about").click()}}>About me</p></NavLink>
-          <NavLink donde="#servicios">Services</NavLink>
+          <NavLink donde="#inicio">{t('home')}</NavLink>
+          <NavLink donde="#about"><p onClick={()=>{document.getElementById("about").click()}}>{t('about')}</p></NavLink>
+          <NavLink donde="#servicios">{t('services')}</NavLink>
         </ul>
       </nav>
     </NavContext.Provider>

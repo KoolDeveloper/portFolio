@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About me",
+    "services": "Services"
+  },
+  "presentation": {
+    "im": "I'm",
+    "sd": "Software Developer",
+    "ux": "Ui/Ux Designer",
+    "about": "Who's James?",
+    "description": "I'm proficient in Front as in Back-end development, my background starts on 2019 pandemics when I decided to start learning python by my own, I quickly realized that I was going to need some guidance if I wanted to grow so I decided to join Platzi, there I've learned the OOP principles and git repositories management to finally built my first portfolio in vanilla javascript. I kept learning untill I got my first React project with node.js as backend server achieved. <br /><br /> Since that point I've been applying for bacants and never stopped learning but it has been hard without a title, so what you'll see added on my works are all personal projects, I hope you enjoy them!"
+  }
+}

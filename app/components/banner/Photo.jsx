@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
+import { useTranslations } from "next-intl";
 
 import { Dancing_Script } from "next/font/google";
 
@@ -10,6 +11,8 @@ const dancingScript = Dancing_Script({
 });
 
 function Photo({ setIsHidden, isHidden }) {
+  const t = useTranslations("presentation");
+
   return (
     <div
       className={`absolute top-0 ${
@@ -29,7 +32,7 @@ function Photo({ setIsHidden, isHidden }) {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString("I'm")
+                .typeString(t("im"))
                 .pasteString("<br>")
                 .typeString("James Ruiz")
                 .start();
@@ -37,11 +40,11 @@ function Photo({ setIsHidden, isHidden }) {
           />
         </div>
         <div
-          className={`${dancingScript.className} font-bold text-lg text-white absolute z-10 bottom-8 lg:text-3xl lg:bottom-16 group-hover:text-yellow-200`}
+          className={`${dancingScript.className} font-bold text-lg text-white absolute z-10 bottom-8 lg:text-3xl lg:bottom-14 group-hover:text-yellow-200`}
         >
           <Typewriter
             options={{
-              strings: ["Software Developer", "UI/UX Designer"],
+              strings: [t("sd"), t("ux")],
               autoStart: true,
               loop: true,
             }}
