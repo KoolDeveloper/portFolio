@@ -2,6 +2,7 @@
     "navigation":{
         "home": "Inicio",
         "about": "Sobre mí",
+        "skills": "Habilidades",
         "services": "Servicios"
     },
     "presentation":{
