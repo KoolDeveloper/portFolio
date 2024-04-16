@@ -7,6 +7,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        walk: {
+          "0%": { backgroundPosition: "0" },
+          "100%": { backgroundPosition: "-672px" },
+        },
+        movebg : {
+          "0%":{ backgroundPosition: "550px" },
+          "100%" : { backgroundPosition: "0" }
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        walk: 'walk 1s steps(6) infinite',
+        movesky: 'movebg 30s linear infinite',
+        movesea: 'movebg 9s linear infinite'
+      },
       fontFamily: {
         DotGothic16: ["DotGothic16", "sans-serif"],
       },

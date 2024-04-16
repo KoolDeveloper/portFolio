@@ -27,7 +27,7 @@ function NavBar() {
           } py-20 space-y-4 text-anakiwa-800 dark:text-rope-600 md:flex md:top-0 md:relative md:min-h-0 md:space-y-0 md:translate-x-0 md:space-x-6 md:p-0 font-semibold text-xl text-center`}
         >
           <NavLink donde="#inicio">{t('home')}</NavLink>
-          <NavLink donde="#about"><p onClick={()=>{document.getElementById("about").click()}}>{t('about')}</p></NavLink>
+          <NavLink donde="#descriptionSection"><p onClick={()=>{document.getElementById("about").click()}}>{t('about')}</p></NavLink>
           <NavLink donde="#skills">{t('skills')}</NavLink>
         </ul>
       </nav>

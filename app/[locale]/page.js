@@ -1,6 +1,7 @@
 import { DotGothic16 } from "next/font/google";
 import About from "../ui/About";
 import Skills from "../ui/Skills";
+import Walker from "../components/walkerAnimation/Walker";
 
 
 const dotGothic16 = DotGothic16({
@@ -15,6 +16,7 @@ export default function Home() {
     <main className={`grid gap-4 md:gap-8 ${dotGothic16.className}`}>
       <About />
       <Skills />
+      <Walker />
     </main>
   );
 }

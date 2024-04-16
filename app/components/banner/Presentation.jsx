@@ -8,7 +8,7 @@ export default function Presentation() {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <section className={`mt-20`}>
+    <section className={`mt-20`} id="descriptionSection">
       <div className="text-xl text-center">
         <div className="relative flex justify-center items-center">
           <Photo isHidden={isHidden} setIsHidden={setIsHidden} />
