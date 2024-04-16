@@ -21,7 +21,7 @@ function Photo({ setIsHidden, isHidden }) {
     >
       <button
         id="about"
-        className="mt-8 group relative w-[60vw] md:w-[30vw] h-[60vw] md:h-[30vw] flex justify-center items-center bg-[#e63b1a] hover:bg-[#ab0603] mx-auto rounded-full border-[5px] border-black shadow-3xl"
+        className="mt-8 group relative w-[60vw] md:w-[30vw] h-[60vw] md:h-[30vw] flex justify-center items-center bg-cinnabar hover:bg-cinnabar-700 mx-auto rounded-full border-[5px] border-black shadow-3xl"
         onClick={() => {
           setIsHidden(!isHidden);
         }}
@@ -56,7 +56,7 @@ function Photo({ setIsHidden, isHidden }) {
               <div className="relative rounded-full w-[90%] h-[90%] shadow-dentro flex justify-center items-center">
                 <div className="relative rounded-full w-[90%] h-[90%] shadow-dentro flex justify-center items-center">
                   <div className="relative rounded-full w-[92%] h-[92%] shadow-dentro flex justify-center items-center">
-                    <div className="relative w-[90%] h-[90%] bg-[#3e0001] rounded-full overflow-hidden group-hover:bg-blue-dianne-700">
+                    <div className="relative w-[90%] h-[90%] bg-cinnabar-900 rounded-full overflow-hidden group-hover:bg-cinnabar-800">
                       <Image
                         width={420}
                         height={594}

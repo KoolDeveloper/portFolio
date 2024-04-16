@@ -2,8 +2,8 @@ import Presentation from "../components/banner/Presentation";
 
 export default function About() {
   return (
-    <div className="w-full flex flex-col cursor-default">
+    <section className="w-full flex flex-col cursor-default h-[96vw] md:h-[44vw]">
       <Presentation />
-    </div>
+    </section>
   );
 }

@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        DotGothic16: ["DotGothic16", "sans-serif"]
+      fontFamily: {
+        DotGothic16: ["DotGothic16", "sans-serif"],
       },
       boxShadow: {
-        '3xl': '0px 0px 52px 0px rgba(0,0,0,1);',
-        'dentro': 'inset 0px 0px 20px 0px rgba(250,176,20,1);'
+        "3xl": "0px 0px 52px 0px rgba(0,0,0,1);",
+        dentro: "inset 0px 0px 20px 0px rgba(250,176,20,1);",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -103,6 +103,34 @@ module.exports = {
           800: "#583B11",
           900: "#291C08",
           950: "#110C03",
+        },
+        cinnabar: {
+          DEFAULT: "#E63B1A",
+          50: "#FCE8E4",
+          100: "#FAD8D2",
+          200: "#F6B9AD",
+          300: "#F29988",
+          400: "#EE7A64",
+          500: "#EA5A3F",
+          600: "#E63B1A",
+          700: "#B42E14",
+          800: "#82210E",
+          900: "#4F1409",
+          950: "#360E06",
+        },
+        "bright-red": {
+          DEFAULT: "#AB0603",
+          50: "#FEBBB9",
+          100: "#FDA7A5",
+          200: "#FD807D",
+          300: "#FC5855",
+          400: "#FB312D",
+          500: "#FB0905",
+          600: "#D30704",
+          700: "#AB0603",
+          800: "#740402",
+          900: "#3D0201",
+          950: "#210101",
         },
       },
     },
