@@ -24,8 +24,12 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         walk: 'walk 1s steps(6) infinite',
-        movesky: 'movebg 30s linear infinite',
-        movesea: 'movebg 9s linear infinite'
+        move1: 'movebg 120s linear infinite',
+        move2: 'movebg 100s linear infinite',
+        move3: 'movebg 80s linear infinite',
+        move4: 'movebg 60s linear infinite',
+        move5: 'movebg 40s linear infinite',
+        move6: 'movebg 20s linear infinite'
       },
       fontFamily: {
         DotGothic16: ["DotGothic16", "sans-serif"],
