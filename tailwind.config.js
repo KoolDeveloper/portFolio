@@ -23,8 +23,9 @@ module.exports = {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        walk: 'walk 1s steps(6) infinite',
-        move1: 'movebg 120s linear infinite',
+        walk1: 'walk 1.2s steps(6) infinite',
+        walk2: 'walk 0.8s steps(6) infinite',
+        move1: 'movebg 300s linear infinite',
         move2: 'movebg 100s linear infinite',
         move3: 'movebg 80s linear infinite',
         move4: 'movebg 60s linear infinite',
