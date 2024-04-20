@@ -3,7 +3,7 @@ import SkillsDescription from "../components/skills/SkillsDescription";
 
 function Skills() {
   return (
-    <section className="relative bg-blue-dianne-400 grid gap-2 p-6 w-[95vw] md:w-1/2 m-auto z-10 rounded-md shadow-dentro" id="skills">
+    <section className="relative bg-blue-dianne-400 grid gap-2 p-6 w-[92vw] md:w-1/2 m-auto z-10 rounded-md shadow-dentro" id="skills">
       <SkillsDescription />
       <SkillsBars />
     </section>

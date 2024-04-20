@@ -6,7 +6,7 @@ function Description({ isHidden }) {
   const t = useTranslations("presentation");
   return (
     <div
-      className={`absolute top-0 z-20 ${
+      className={`absolute top-0 z-10 ${
         isHidden
           ? "-translate-x-[100%] opacity-0"
           : "translate-x-0 translate-y-[30vh] md:translate-y-0 md:translate-x-[18vw] opacity-100"

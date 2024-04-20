@@ -1,19 +1,23 @@
 {
-    "navigation":{
-        "home": "Inicio",
-        "about": "Sobre mí",
-        "skills": "Habilidades",
-        "services": "Servicios"
-    },
-    "presentation":{
-        "im": "Soy",
-        "sd": "Desarrollador de software",
-        "ux": "Diseñador Ui/Ux",
-        "about": "¿Quien es James?",
-        "description": "Soy competente tanto en el desarrollo de Front como de Back-end, mi experiencia comienza en la pandemia de 2019 cuando decidí comenzar a aprender Python por mi cuenta, rápidamente me di cuenta de que iba a necesitar algo de orientación si quería crecer, así que decidí comprarme una membrecia en Platzi, allí aprendí los principios de programación orientada a objetos y la gestión de repositorios de git para finalmente construir mi primer portafolio en javascript plano. Seguí aprendiendo hasta que logre construir mi primer proyecto de React con node.js corriendo en el backend. <br /><br /> Desde entonces he estado buscando una oportunidad de emplearme y nunca he dejado de aprender, pero ha sido difícil, así que lo que verás en la sección de mis trabajos son todos proyectos personales, espero que te gusten."
-    },
-    "skills":{
-        "title": "Mis habilidades",
-        "content": "Estas son las herramientas que he perfeccionado durante mi constrante ciclo de aprendizaje en el mundo del desarrollo"
-    }
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "services": "Servicios"
+  },
+  "presentation": {
+    "im": "Soy",
+    "sd": "Desarrollador de software",
+    "ux": "Diseñador Ui/Ux",
+    "about": "¿Quien es James?",
+    "description": "Soy competente tanto en el desarrollo de Front como de Back-end, mi experiencia comienza en la pandemia de 2019 cuando decidí comenzar a aprender Python por mi cuenta, rápidamente me di cuenta de que iba a necesitar algo de orientación si quería crecer, así que decidí comprarme una membrecia en Platzi, allí aprendí los principios de programación orientada a objetos y la gestión de repositorios de git para finalmente construir mi primer portafolio en javascript plano. Seguí aprendiendo hasta que logre construir mi primer proyecto de React con node.js corriendo en el backend. <br /><br /> Desde entonces he estado buscando una oportunidad de emplearme y nunca he dejado de aprender, pero ha sido difícil, así que lo que verás en la sección de mis trabajos son todos proyectos personales, espero que te gusten."
+  },
+  "skills": {
+    "title": "Mis habilidades",
+    "content": "Estas son las herramientas que he perfeccionado durante mi constrante ciclo de aprendizaje en el mundo del desarrollo"
+  },
+  "services": {
+    "title": "Mis servicios",
+    "css": "Animación en CSS"
+  }
 }
