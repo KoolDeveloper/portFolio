@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function SocialLinks() {
   return (
-    <div className="w-full flex justify-evenly text-3xl">
+    <div className="w-full flex justify-evenly text-3xl text-harvest-gold-600">
       <Link
         href={"https://www.linkedin.com/in/koolxtreme/"}
         target="_blank"

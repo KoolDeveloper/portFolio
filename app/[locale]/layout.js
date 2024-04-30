@@ -26,7 +26,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <body
-        className="bg-rope-300 dark:bg-anakiwa-800 select-none"
+        className="bg-peach-cream dark:bg-anakiwa-900 dark:text-harvest-gold select-none"
       >
         <div id="inicio"></div>
         <NextIntlClientProvider locale={locale} messages={messages}>

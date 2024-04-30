@@ -161,7 +161,7 @@ module.exports = {
             gridColumnStart: "1",
             gridColumnEnd: "10",
           },
-          "50%":{
+          "50%": {
             gridRowStart: "8",
             gridRowEnd: "10",
             gridColumnStart: "3",
@@ -203,6 +203,7 @@ module.exports = {
       boxShadow: {
         "3xl": "0px 0px 52px 0px rgba(0,0,0,1);",
         dentro: "inset 0px 0px 20px 0px rgba(250,176,20,1);",
+        dentroDark: "inset 0 0 20px 0 rgba(54, 150, 147, 1)"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -321,6 +322,34 @@ module.exports = {
           800: "#740402",
           900: "#3D0201",
           950: "#210101",
+        },
+        "mint-green": {
+          DEFAULT: "#9FFF8C",
+          50: "#F4FFF2",
+          100: "#E3FFDE",
+          200: "#C1FFB5",
+          300: "#9FFF8C",
+          400: "#70FF54",
+          500: "#41FF1C",
+          600: "#25E300",
+          700: "#1CAB00",
+          800: "#137300",
+          900: "#0A3A00",
+          950: "#051E00",
+        },
+        portafino: {
+          DEFAULT: "#FFFFB4",
+          50: "#FFFFF1",
+          100: "#FFFFDD",
+          200: "#FFFFB4",
+          300: "#FFFF7C",
+          400: "#FFFF44",
+          500: "#FFFF0C",
+          600: "#D3D300",
+          700: "#9B9B00",
+          800: "#626200",
+          900: "#2A2A00",
+          950: "#0E0E00",
         },
       },
     },

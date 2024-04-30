@@ -9,8 +9,8 @@ function Description({ isHidden }) {
       className={`absolute top-0 z-10 ${
         isHidden
           ? "-translate-x-[100%] opacity-0"
-          : "translate-x-0 translate-y-[30vh] md:translate-y-0 md:translate-x-[18vw] opacity-100"
-      } grid gap-12 p-8 bg-cinnabar w-[90vw] md:w-[60%] rounded-3xl shadow-dentro transition-[opacity, transform] duration-1000`}
+          : "translate-x-0 translate-y-[35vh] md:translate-y-0 md:translate-x-[18vw] opacity-100"
+      } grid gap-12 p-8 bg-portafino dark:bg-blue-dianne-600 w-[90vw] md:w-[60%] rounded-3xl shadow-dentro dark:shadow-dentroDark transition-[opacity, transform] duration-1000`}
     >
       <h1>{t("about")}</h1>
       <div className="text-justify">
