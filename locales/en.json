@@ -18,6 +18,7 @@
   },
   "services": {
     "title": "My Services",
+    "html":"Html layout",
     "css": "CSS Animation"
   }
 }

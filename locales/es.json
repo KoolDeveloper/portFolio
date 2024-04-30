@@ -18,6 +18,7 @@
   },
   "services": {
     "title": "Mis servicios",
+    "html":"Maquetado html",
     "css": "Animación en CSS"
   }
 }
