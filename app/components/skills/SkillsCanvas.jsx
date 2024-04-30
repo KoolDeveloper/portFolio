@@ -4,8 +4,13 @@ import React, { useState, useEffect } from "react";
 
 const CanvasConImagenes = () => {
   const [imagenes, setImagenes] = useState([]);
+  const [windowWith, setWindowWith] = useState([window.innerWidth]);
 
-  // Carga las imágenes al estado (reemplaza las rutas con las de tus imágenes)
+  window.onresize = function () {
+    setWindowWith(window.innerWidth);
+  };
+
+  // Carga las imágenes al estado
   useEffect(() => {
     setImagenes([
       ["/technologies/css-3.png", "https://www.w3.org/Style/CSS/"],
@@ -29,43 +34,55 @@ const CanvasConImagenes = () => {
     const canvas = document.getElementById("miCanvas");
     const ctx = canvas.getContext("2d");
 
+    //Limpia todos los intervalos para evitar bugs en resize
+    var highestTimeoutId = setTimeout(";");
+    for (var i = 0; i < highestTimeoutId; i++) {
+      clearTimeout(i);
+    }
+
     // Función para dibujar las imágenes en el canvas con efecto de flotación
     function dibujarImagenes() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let cols = Math.floor(canvas.width / 120);
+      let currentCol = 0;
+      let currentRow = 0;
 
       imagenes.forEach((imagen, index) => {
-        let x, y;
-        if (index < 4) {
-          x = 0;
-          y = index * 150;
-        } else {
-          x = 150;
-          y = (index % 4) * 150;
+        let x,
+          y = 0;
+        if (currentCol < cols) {
+          x = currentCol * 120;
+          y = 120 * currentRow;
+          currentCol += 1;
+          if (currentCol >= cols) {
+            currentRow += 1;
+            currentCol = 0;
+          }
         }
+
         const img = new Image();
         img.src = imagen[0];
         img.onload = () => {
-          // Agrega un efecto de flotación vertical
+          // Agregando el efecto de flotación vertical
           let offsetY = 0;
-          let direction = 1; // 1 para mover hacia abajo, -1 para mover hacia arriba
+          let direction = 1;
           const oscillateInterval = setInterval(() => {
             ctx.clearRect(x, y, 120, 120);
             ctx.drawImage(img, x, y + offsetY, 100, 100);
             offsetY += direction;
             if (offsetY >= 10 || offsetY <= 0) {
-              direction *= -1; // Cambia la dirección al llegar al límite
-            } // Ajusta la velocidad y rango de flotación
-          }, Math.floor(Math.random() * 21) + 80); // Intervalo de actualización (ajusta según tu preferencia)
+              direction *= -1;
+            }
+          }, Math.floor(Math.random() * 21) + 80);
         };
 
-        // Agrega un evento de clic a la imagen
+        // Agregando hipervinculos a las imagenes
         canvas.addEventListener("click", (event) => {
           const rect = canvas.getBoundingClientRect();
           const clicX = event.clientX - rect.left;
           const clicY = event.clientY - rect.top;
 
           if (clicX > x && clicX < x + 100 && clicY > y && clicY < y + 100) {
-            // Redirige al hipervínculo deseado (por ejemplo, abre en una nueva pestaña)
             window.open(imagen[1], "_blank");
           }
         });
@@ -74,10 +91,15 @@ const CanvasConImagenes = () => {
 
     // Inicia la animación
     dibujarImagenes();
-  }, [imagenes]);
+  }, [imagenes, windowWith]);
 
   return (
-    <canvas id="miCanvas" width="250" height="600" className="mx-auto"></canvas>
+    <canvas
+      id="miCanvas"
+      width={windowWith < 720 ? "240" : "600"}
+      height={windowWith >= 720 ? "300" : "600"}
+      className="mx-auto mt-8"
+    ></canvas>
   );
 };
 
