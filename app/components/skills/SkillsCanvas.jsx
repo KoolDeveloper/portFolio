@@ -27,7 +27,8 @@ const CanvasConImagenes = () => {
         "https://www.google.com/script/start/",
       ],
       ["/technologies/node.png", "https://nodejs.org/"],
-      ["/technologies/mongo.png", "https://www.mongodb.com/"]
+      ["/technologies/mongo.png", "https://www.mongodb.com/"],
+      ["/technologies/react.png", "https://react.dev/"]
     ]);
   }, []);
 

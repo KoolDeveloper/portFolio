@@ -1,4 +1,5 @@
 import SectionContainer from "../components/SectionContainer";
+import DataBaseManagement from "../components/myservices/DataBaseManagement";
 import MiniPage from "../components/myservices/MiniPage";
 import DesertCity from "../components/myservices/walkerAnimation/DesertCity";
 import { useTranslations } from "next-intl";
@@ -16,6 +17,8 @@ function Services() {
           <div className="mx-auto">
             <DesertCity />
           </div>
+          <h2>Gestion de Bases de datos</h2>
+          <DataBaseManagement />
         </div>
       </div>
     </SectionContainer>
