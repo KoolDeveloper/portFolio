@@ -3,7 +3,6 @@ import Header from "../ui/Header";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
-
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }];
 }
@@ -26,6 +25,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <body
+        suppressHydrationWarning={true}
         className="bg-peach-cream dark:bg-anakiwa-900 dark:text-harvest-gold select-none"
       >
         <div id="inicio"></div>

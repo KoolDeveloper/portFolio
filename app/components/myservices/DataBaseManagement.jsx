@@ -7,6 +7,7 @@ function DataBaseManagement() {
 
   useEffect(() => {
     let animationPosition = 0;
+    let colorChange = 0;
 
     function informationAnimation() {
       const canvas = canvasRef.current;
@@ -21,7 +22,10 @@ function DataBaseManagement() {
       ctx.fill();
 
       // Dibuja el servidor (rectángulo)
-      ctx.fillStyle = animationPosition >= 0.5 ? "#008f11" : "#34cceb";
+      ctx.fillStyle =
+        animationPosition <= 0.25 || animationPosition >= 0.75
+          ? "#008f11"
+          : "#34cceb";
       ctx.fillRect(111, 40, 20, 40);
 
       // Dibuja la línea que conecta el servidor con las bases de datos
@@ -63,58 +67,50 @@ function DataBaseManagement() {
       ctx.arc(20, 130, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#ebc334";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(20, 120, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#ebc334";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(20, 110, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
 
       ctx.fillStyle = "#003b00";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(122, 150, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#003b00";
-      ctx.strokeStyle = "#000";
+
       ctx.beginPath();
       ctx.arc(122, 140, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#003b00";
-      ctx.strokeStyle = "#000";
+
       ctx.beginPath();
       ctx.arc(122, 130, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
 
       ctx.fillStyle = "#34cceb";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(220, 130, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#34cceb";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(220, 120, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = "#34cceb";
-      ctx.strokeStyle = "#000";
       ctx.beginPath();
       ctx.arc(220, 110, 20, 0, 2 * Math.PI);
       ctx.fill();
       ctx.stroke();
 
+      // Los llamados "Datos"
+
+      //La de la izquierda
       ctx.beginPath();
+      ctx.fillStyle = "#ebc334";
       ctx.arc(
         110 - (animationPosition >= 0.5 ? 90 : 180 * animationPosition),
         60 + (animationPosition >= 0.5 ? 20 * animationPosition : 0),
@@ -125,10 +121,12 @@ function DataBaseManagement() {
       ctx.fill();
       ctx.stroke();
 
+      //La derecha
       ctx.beginPath();
+      ctx.fillStyle = "#34cceb";
       ctx.arc(
-        120 + (animationPosition >= 0.5 ? 100 : 200 * animationPosition),
-        60 + (animationPosition >= 0.5 ? 20 * animationPosition : 0),
+        120 + (animationPosition >= 0.75 ? 100 : 130 * animationPosition),
+        60 + (animationPosition >= 0.75 ? 20 * animationPosition : 0),
         10,
         0,
         2 * Math.PI
@@ -136,8 +134,10 @@ function DataBaseManagement() {
       ctx.fill();
       ctx.stroke();
 
+      //La central
       if (animationPosition < 0.5) {
         ctx.beginPath();
+        ctx.fillStyle = "#003b00";
         ctx.arc(122, 90 + 20 * animationPosition, 10, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
@@ -147,8 +147,9 @@ function DataBaseManagement() {
         animationPosition += 0.005;
       }
       if (animationPosition >= 1) {
-        animationPosition = 0.0;
+        animationPosition = 0;
       }
+
       requestAnimationFrame(informationAnimation);
     }
 

@@ -4,10 +4,25 @@ import React, { useState, useEffect } from "react";
 
 const CanvasConImagenes = () => {
   const [imagenes, setImagenes] = useState([]);
-  const [windowWith, setWindowWith] = useState([window.innerWidth]);
+  const [windowWidth, setWindowWidth] = useState(0);
 
-  window.onresize = function () {
-    setWindowWith(window.innerWidth);
+  useEffect(() => {
+    // Verifica si estamos en el navegador antes de acceder a window.innerWidth
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
+    // Limpia el listener cuando el componente se desmonta
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
   };
 
   // Carga las imágenes al estado
@@ -28,7 +43,7 @@ const CanvasConImagenes = () => {
       ],
       ["/technologies/node.png", "https://nodejs.org/"],
       ["/technologies/mongo.png", "https://www.mongodb.com/"],
-      ["/technologies/react.png", "https://react.dev/"]
+      ["/technologies/react.png", "https://react.dev/"],
     ]);
   }, []);
 
@@ -93,13 +108,13 @@ const CanvasConImagenes = () => {
 
     // Inicia la animación
     dibujarImagenes();
-  }, [imagenes, windowWith]);
+  }, [imagenes, windowWidth]);
 
   return (
     <canvas
       id="miCanvas"
-      width={windowWith < 720 ? "240" : "600"}
-      height={windowWith >= 720 ? "300" : "600"}
+      width={windowWidth < 720 ? "240" : "600"}
+      height={windowWidth >= 720 ? "300" : "600"}
       className="mx-auto mt-8"
     ></canvas>
   );
