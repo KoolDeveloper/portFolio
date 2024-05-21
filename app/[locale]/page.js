@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className={`${dotGothic16.className}`}>
       <About />
-      <section className="w-full grid gap-8 md:gap-10 md:grid-cols-6 p-6">
+      <section className="w-full grid gap-8 md:gap-10 md:grid-cols-6 md:grid-rows-6 p-6">
         <Skills />
         <Services />
       </section>

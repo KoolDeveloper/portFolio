@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 function Services() {
   const t = useTranslations("services");
   return (
-    <SectionContainer mdCols={"md:col-start-3 md:col-end-7"}>
+    <SectionContainer mdCols={"md:col-start-3 md:col-end-7"} mdRows={"md:row-start-1 md:row-end-7"}>
       <div id="services">
         <h3 className="text-center text-2xl">{t("title")}</h3>
         <div className="mt-5 grid lg:grid-cols-2 items-center justify-items-center gap-4">
