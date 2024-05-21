@@ -4,7 +4,7 @@ import SkillsDescription from "../components/skills/SkillsDescription";
 
 function Skills() {
   return (
-    <SectionContainer>
+    <SectionContainer mdCols={"md:col-start-1 md:col-end-3"}>
       <div id="skills">
         <SkillsDescription />
         <SkillsCanvas />

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 function Services() {
   const t = useTranslations("services");
   return (
-    <SectionContainer>
+    <SectionContainer mdCols={"md:col-start-3 md:col-end-7"}>
       <div id="services">
         <h3 className="text-center text-2xl">{t("title")}</h3>
         <div className="mt-5 grid lg:grid-cols-2 items-center justify-items-center gap-4">
@@ -17,7 +17,7 @@ function Services() {
           <div className="mx-auto">
             <DesertCity />
           </div>
-          <h2>Gestion de Bases de datos</h2>
+          <h2 className="text-xl mb-6">{t("db")}</h2>
           <DataBaseManagement />
         </div>
       </div>

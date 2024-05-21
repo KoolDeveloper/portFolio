@@ -19,6 +19,7 @@
   "services": {
     "title": "Mis servicios",
     "html":"Maquetado html",
-    "css": "Animación en CSS"
+    "css": "Animación en CSS",
+    "db": "Gestion de bases de datos"
   }
 }

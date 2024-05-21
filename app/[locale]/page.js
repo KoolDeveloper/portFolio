@@ -11,10 +11,12 @@ const dotGothic16 = DotGothic16({
 
 export default function Home() {
   return (
-    <main className={`grid gap-8 md:gap-10 ${dotGothic16.className}`}>
+    <main className={`${dotGothic16.className}`}>
       <About />
-      <Skills />
-      <Services />
+      <section className="w-full grid gap-8 md:gap-10 md:grid-cols-6 p-6">
+        <Skills />
+        <Services />
+      </section>
     </main>
   );
 }

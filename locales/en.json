@@ -19,6 +19,7 @@
   "services": {
     "title": "My Services",
     "html":"Html layout",
-    "css": "CSS Animation"
+    "css": "CSS animation",
+    "db": "Data base management"
   }
 }

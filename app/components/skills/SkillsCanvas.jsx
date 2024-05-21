@@ -44,6 +44,8 @@ const CanvasConImagenes = () => {
       ["/technologies/node.png", "https://nodejs.org/"],
       ["/technologies/mongo.png", "https://www.mongodb.com/"],
       ["/technologies/react.png", "https://react.dev/"],
+      ["/technologies/figma.png", "https://www.figma.com/"],
+      ["/technologies/trello.png", "https://trello.com/"],
     ]);
   }, []);
 
@@ -113,9 +115,9 @@ const CanvasConImagenes = () => {
   return (
     <canvas
       id="miCanvas"
-      width={windowWidth < 720 ? "240" : "600"}
-      height={windowWidth >= 720 ? "300" : "600"}
-      className="mx-auto mt-8"
+      width={windowWidth < 720 ? "240" : "360"}
+      height={windowWidth < 720 ? 720 : 600}
+      className="mx-auto mt-8 cursor-pointer"
     ></canvas>
   );
 };
