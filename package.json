@@ -11,8 +11,8 @@
   "dependencies": {
     "@ionic/react": "^7.8.2",
     "ionicons": "^7.3.1",
-    "next": "14.1.0",
-    "next-intl": "^3.11.1",
+    "next": "^14.2.3",
+    "next-intl": "^3.14.0",
     "react": "^18",
     "react-dom": "^18",
     "typewriter-effect": "^2.21.0"
